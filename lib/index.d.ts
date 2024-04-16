@@ -43,6 +43,12 @@ declare module "pdf.js-extract" {
 		}
 	}
 
+	export interface PDFExtractLink {
+		x: number;
+		y: number;
+		url: string;
+	}
+	
 	export interface PDFExtractPage {
 		pageInfo: {
 			num: number;
@@ -53,7 +59,7 @@ declare module "pdf.js-extract" {
 			width: number;
 			height: number;
 		};
-		links: Array<string>;
+		links: Array<PDFExtractLink>;
 		content: Array<PDFExtractText>;
 	}
 
